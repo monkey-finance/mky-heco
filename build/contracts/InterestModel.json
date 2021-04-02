@@ -1,0 +1,364 @@
+{
+  "contractName": "InterestModel",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "debt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "floating",
+          "type": "uint256"
+        }
+      ],
+      "name": "getInterestRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"debt\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"floating\",\"type\":\"uint256\"}],\"name\":\"getInterestRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/InterestModel.sol\":\"InterestModel\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/InterestModel.sol\":{\"keccak256\":\"0x5150b03d3f8c32e80bd2865c83f2e58a608ada575ec154aeaaa799547ebb208f\",\"urls\":[\"bzz-raw://0eb1008f7e5f773a1d5b01ed59132ff50bf4850f532124fc55df49fab0bc35ea\",\"dweb:/ipfs/Qmdpjf1nFFzP2hNd948YzzYooK3piaGwQu5q4SU8H46ZSG\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\npragma solidity ^0.5.16;\n\ninterface InterestModel {\n    function getInterestRate(uint256 debt, uint256 floating) external view returns (uint256);\n}\n",
+  "sourcePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/InterestModel.sol",
+  "ast": {
+    "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/InterestModel.sol",
+    "exportedSymbols": {
+      "InterestModel": [
+        6640
+      ]
+    },
+    "id": 6641,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6630,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:24:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6640,
+        "linearizedBaseContracts": [
+          6640
+        ],
+        "name": "InterestModel",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 6639,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getInterestRate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6635,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6632,
+                  "name": "debt",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6639,
+                  "src": "82:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6631,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "82:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6634,
+                  "name": "floating",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6639,
+                  "src": "96:16:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6633,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "96:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "81:32:18"
+            },
+            "returnParameters": {
+              "id": 6638,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6637,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6639,
+                  "src": "137:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6636,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "137:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "136:9:18"
+            },
+            "scope": 6640,
+            "src": "57:89:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6641,
+        "src": "27:121:18"
+      }
+    ],
+    "src": "1:148:18"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/InterestModel.sol",
+      "exportedSymbols": {
+        "InterestModel": [
+          6640
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 6630,
+        "name": "PragmaDirective",
+        "src": "1:24:18"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            6640
+          ],
+          "name": "InterestModel",
+          "scope": 6641
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getInterestRate",
+              "scope": 6640,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "debt",
+                      "scope": 6639,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6631,
+                        "name": "ElementaryTypeName",
+                        "src": "82:7:18"
+                      }
+                    ],
+                    "id": 6632,
+                    "name": "VariableDeclaration",
+                    "src": "82:12:18"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "floating",
+                      "scope": 6639,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6633,
+                        "name": "ElementaryTypeName",
+                        "src": "96:7:18"
+                      }
+                    ],
+                    "id": 6634,
+                    "name": "VariableDeclaration",
+                    "src": "96:16:18"
+                  }
+                ],
+                "id": 6635,
+                "name": "ParameterList",
+                "src": "81:32:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 6639,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6636,
+                        "name": "ElementaryTypeName",
+                        "src": "137:7:18"
+                      }
+                    ],
+                    "id": 6637,
+                    "name": "VariableDeclaration",
+                    "src": "137:7:18"
+                  }
+                ],
+                "id": 6638,
+                "name": "ParameterList",
+                "src": "136:9:18"
+              }
+            ],
+            "id": 6639,
+            "name": "FunctionDefinition",
+            "src": "57:89:18"
+          }
+        ],
+        "id": 6640,
+        "name": "ContractDefinition",
+        "src": "27:121:18"
+      }
+    ],
+    "id": 6641,
+    "name": "SourceUnit",
+    "src": "1:148:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-03-31T08:38:07.157Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

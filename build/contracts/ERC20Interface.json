@@ -1,0 +1,309 @@
+{
+  "contractName": "ERC20Interface",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ERC20Interface.sol\":\"ERC20Interface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ERC20Interface.sol\":{\"keccak256\":\"0xe10a16b8ce3d7c655d6bba16a7908649afddab284fa6bc708689ca87e937e555\",\"urls\":[\"bzz-raw://887bc1894083bc9d9e007ec611551eee188417052829de108c023b41312a3990\",\"dweb:/ipfs/Qmc1Z5fNv5dhxUGBxoszdwrgjEKpupcf6QN7JJScPoz821\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\npragma solidity ^0.5.16;\n\ninterface ERC20Interface {\n    function balanceOf(address user) external view returns (uint256);\n}\n",
+  "sourcePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ERC20Interface.sol",
+  "ast": {
+    "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ERC20Interface.sol",
+    "exportedSymbols": {
+      "ERC20Interface": [
+        5658
+      ]
+    },
+    "id": 5659,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5650,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:24:10"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 5658,
+        "linearizedBaseContracts": [
+          5658
+        ],
+        "name": "ERC20Interface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 5657,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5653,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5652,
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5657,
+                  "src": "77:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5651,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "77:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "76:14:10"
+            },
+            "returnParameters": {
+              "id": 5656,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5655,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5657,
+                  "src": "114:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5654,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "114:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "113:9:10"
+            },
+            "scope": 5658,
+            "src": "58:65:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5659,
+        "src": "27:98:10"
+      }
+    ],
+    "src": "1:125:10"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ERC20Interface.sol",
+      "exportedSymbols": {
+        "ERC20Interface": [
+          5658
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 5650,
+        "name": "PragmaDirective",
+        "src": "1:24:10"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            5658
+          ],
+          "name": "ERC20Interface",
+          "scope": 5659
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "balanceOf",
+              "scope": 5658,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "user",
+                      "scope": 5657,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 5651,
+                        "name": "ElementaryTypeName",
+                        "src": "77:7:10"
+                      }
+                    ],
+                    "id": 5652,
+                    "name": "VariableDeclaration",
+                    "src": "77:12:10"
+                  }
+                ],
+                "id": 5653,
+                "name": "ParameterList",
+                "src": "76:14:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 5657,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5654,
+                        "name": "ElementaryTypeName",
+                        "src": "114:7:10"
+                      }
+                    ],
+                    "id": 5655,
+                    "name": "VariableDeclaration",
+                    "src": "114:7:10"
+                  }
+                ],
+                "id": 5656,
+                "name": "ParameterList",
+                "src": "113:9:10"
+              }
+            ],
+            "id": 5657,
+            "name": "FunctionDefinition",
+            "src": "58:65:10"
+          }
+        ],
+        "id": 5658,
+        "name": "ContractDefinition",
+        "src": "27:98:10"
+      }
+    ],
+    "id": 5659,
+    "name": "SourceUnit",
+    "src": "1:125:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-03-31T08:38:07.100Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

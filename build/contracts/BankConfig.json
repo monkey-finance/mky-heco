@@ -1,0 +1,1704 @@
+{
+  "contractName": "BankConfig",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLiquidateBps",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getReserveBps",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "interestModel",
+      "outputs": [
+        {
+          "internalType": "contract InterestModel",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_getReserveBps",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_getLiquidateBps",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract InterestModel",
+          "name": "_interestModel",
+          "type": "address"
+        }
+      ],
+      "name": "setParams",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "debt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "floating",
+          "type": "uint256"
+        }
+      ],
+      "name": "getInterestRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"debt\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"floating\",\"type\":\"uint256\"}],\"name\":\"getInterestRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getLiquidateBps\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getReserveBps\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"interestModel\",\"outputs\":[{\"internalType\":\"contract InterestModel\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_getReserveBps\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_getLiquidateBps\",\"type\":\"uint256\"},{\"internalType\":\"contract InterestModel\",\"name\":\"_interestModel\",\"type\":\"address\"}],\"name\":\"setParams\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/BankConfig.sol\":\"BankConfig\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/BankConfig.sol\":{\"keccak256\":\"0xe9cc4bd96db286c751359623211867849a199b6bd700061769aef49febf39301\",\"urls\":[\"bzz-raw://eb4ccc963c5947e2f1ced82c1527c9e5b575c7ef17b0ba653147cfd86955df1f\",\"dweb:/ipfs/QmbiFba4rbjaobi9jsCR4jBy6wtV59cCpfyCeRcP4nS3nS\"]},\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/IBankConfig.sol\":{\"keccak256\":\"0xbae579281cf3341ad8df08403e1e4815226a2b2922b95ab6b65aacdd4ae30a35\",\"urls\":[\"bzz-raw://216f3a6f45e110b9da0ae4b5fe827ad1132e9a707d3f8475d670ae513eeb392c\",\"dweb:/ipfs/QmTovpWFY1mvFLaJjWeBKfTbCXoHgRK1MK47WXHx8FLxQB\"]},\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/InterestModel.sol\":{\"keccak256\":\"0x5150b03d3f8c32e80bd2865c83f2e58a608ada575ec154aeaaa799547ebb208f\",\"urls\":[\"bzz-raw://0eb1008f7e5f773a1d5b01ed59132ff50bf4850f532124fc55df49fab0bc35ea\",\"dweb:/ipfs/Qmdpjf1nFFzP2hNd948YzzYooK3piaGwQu5q4SU8H46ZSG\"]},\"@openzeppelin/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xf79fb10e8235770eb4aea7249034076a3cc9f9119ad944fc48705bae9c9d20dc\",\"urls\":[\"bzz-raw://cd3429aa9a4878dcf6c73faa32c3722f4013d4be012ece543b246faa6b50f55c\",\"dweb:/ipfs/QmS55hgTvNEAKinus19m65CB4wcymN8EiUPFpRx5tYJ1i2\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a361081a806100dc6000396000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c8063ac165d7a11610066578063ac165d7a1461012c578063c6dfa13f14610176578063c8792e24146101c2578063ebdec6d3146101e0578063f2fde38b1461023857610093565b8063249c11bd14610098578063715018a6146100b65780638da5cb5b146100c05780638f32d59b1461010a575b600080fd5b6100a061027c565b6040518082815260200191505060405180910390f35b6100be610282565b005b6100c86103bb565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101126103e4565b604051808215151515815260200191505060405180910390f35b61013461043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101ac6004803603604081101561018c57600080fd5b810190808035906020019092919080359060200190929190505050610461565b6040518082815260200191505060405180910390f35b6101ca610521565b6040518082815260200191505060405180910390f35b610236600480360360608110156101f657600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610527565b005b61027a6004803603602081101561024e57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105f5565b005b60015481565b61028a6103e4565b6102fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c6dfa13f84846040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156104de57600080fd5b505afa1580156104f2573d6000803e3d6000fd5b505050506040513d602081101561050857600080fd5b8101908080519060200190929190505050905092915050565b60025481565b61052f6103e4565b6105a1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b826001819055508160028190555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b6105fd6103e4565b61066f576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6106788161067b565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610701576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806107c06026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a723158208050d6636c47b20cee77aa6b90e562e73c29fec62ff6d65f9c1a4a870e54631c64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100935760003560e01c8063ac165d7a11610066578063ac165d7a1461012c578063c6dfa13f14610176578063c8792e24146101c2578063ebdec6d3146101e0578063f2fde38b1461023857610093565b8063249c11bd14610098578063715018a6146100b65780638da5cb5b146100c05780638f32d59b1461010a575b600080fd5b6100a061027c565b6040518082815260200191505060405180910390f35b6100be610282565b005b6100c86103bb565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101126103e4565b604051808215151515815260200191505060405180910390f35b61013461043b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101ac6004803603604081101561018c57600080fd5b810190808035906020019092919080359060200190929190505050610461565b6040518082815260200191505060405180910390f35b6101ca610521565b6040518082815260200191505060405180910390f35b610236600480360360608110156101f657600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610527565b005b61027a6004803603602081101561024e57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105f5565b005b60015481565b61028a6103e4565b6102fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c6dfa13f84846040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156104de57600080fd5b505afa1580156104f2573d6000803e3d6000fd5b505050506040513d602081101561050857600080fd5b8101908080519060200190929190505050905092915050565b60025481565b61052f6103e4565b6105a1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b826001819055508160028190555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b6105fd6103e4565b61066f576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6106788161067b565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610701576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806107c06026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a723158208050d6636c47b20cee77aa6b90e562e73c29fec62ff6d65f9c1a4a870e54631c64736f6c63430005100032",
+  "sourceMap": "164:604:1:-;;;326:23;8:9:-1;5:2;;;30:1;27;20:12;5:2;326:23:1;666:10:22;657:6;;:19;;;;;;;;;;;;;;;;;;724:6;;;;;;;;;;;691:40;;720:1;691:40;;;;;;;;;;;;164:604:1;;;;;;",
+  "deployedSourceMap": "164:604:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;164:604:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;215:28;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1599:137:22;;;:::i;:::-;;814:77;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1165:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;285:34:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;608:158;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;608:158:1;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;249:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;355:247;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;355:247:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1885:107:22;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1885:107:22;;;;;;;;;;;;;;;;;;;:::i;:::-;;215:28:1;;;;:::o;1599:137:22:-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1697:1;1660:40;;1681:6;;;;;;;;;;;1660:40;;;;;;;;;;;;1727:1;1710:6;;:19;;;;;;;;;;;;;;;;;;1599:137::o;814:77::-;852:7;878:6;;;;;;;;;;;871:13;;814:77;:::o;1165:90::-;1205:4;1242:6;;;;;;;;;;;1228:20;;:10;:20;;;1221:27;;1165:90;:::o;285:34:1:-;;;;;;;;;;;;;:::o;608:158::-;688:7;714:13;;;;;;;;;;;:29;;;744:4;750:8;714:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;714:45:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;714:45:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;714:45:1;;;;;;;;;;;;;;;;707:52;;608:158;;;;:::o;249:30::-;;;;:::o;355:247::-;1018:9:22;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;497:14:1;481:13;:30;;;;539:16;521:15;:34;;;;581:14;565:13;;:30;;;;;;;;;;;;;;;;;;355:247;;;:::o;1885:107:22:-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1957:28;1976:8;1957:18;:28::i;:::-;1885:107;:::o;2093:225::-;2186:1;2166:22;;:8;:22;;;;2158:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2275:8;2246:38;;2267:6;;;;;;;;;;;2246:38;;;;;;;;;;;;2303:8;2294:6;;:17;;;;;;;;;;;;;;;;;;2093:225;:::o",
+  "source": "\npragma solidity ^0.5.16;\n\nimport \"@openzeppelin/contracts/ownership/Ownable.sol\";\nimport \"./interfaces/IBankConfig.sol\";\nimport \"./interfaces/InterestModel.sol\";\n\ncontract BankConfig is IBankConfig, Ownable {\n\n    uint256 public getReserveBps;\n    uint256 public getLiquidateBps;\n    InterestModel public interestModel;\n\n    constructor() public {}\n\n    function setParams(uint256 _getReserveBps, uint256 _getLiquidateBps, InterestModel _interestModel) public onlyOwner {\n        getReserveBps = _getReserveBps;\n        getLiquidateBps = _getLiquidateBps;\n        interestModel = _interestModel;\n    }\n\n    function getInterestRate(uint256 debt, uint256 floating) external view returns (uint256) {\n        return interestModel.getInterestRate(debt, floating);\n    }\n}",
+  "sourcePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/BankConfig.sol",
+  "ast": {
+    "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/BankConfig.sol",
+    "exportedSymbols": {
+      "BankConfig": [
+        1727
+      ]
+    },
+    "id": 1728,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1669,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:24:1"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/ownership/Ownable.sol",
+        "file": "@openzeppelin/contracts/ownership/Ownable.sol",
+        "id": 1670,
+        "nodeType": "ImportDirective",
+        "scope": 1728,
+        "sourceUnit": 5105,
+        "src": "27:55:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/IBankConfig.sol",
+        "file": "./interfaces/IBankConfig.sol",
+        "id": 1671,
+        "nodeType": "ImportDirective",
+        "scope": 1728,
+        "sourceUnit": 3828,
+        "src": "83:38:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/InterestModel.sol",
+        "file": "./interfaces/InterestModel.sol",
+        "id": 1672,
+        "nodeType": "ImportDirective",
+        "scope": 1728,
+        "sourceUnit": 4776,
+        "src": "122:40:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1673,
+              "name": "IBankConfig",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3827,
+              "src": "187:11:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IBankConfig_$3827",
+                "typeString": "contract IBankConfig"
+              }
+            },
+            "id": 1674,
+            "nodeType": "InheritanceSpecifier",
+            "src": "187:11:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1675,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5104,
+              "src": "200:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$5104",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 1676,
+            "nodeType": "InheritanceSpecifier",
+            "src": "200:7:1"
+          }
+        ],
+        "contractDependencies": [
+          3827,
+          5104
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1727,
+        "linearizedBaseContracts": [
+          1727,
+          5104,
+          3827
+        ],
+        "name": "BankConfig",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1678,
+            "name": "getReserveBps",
+            "nodeType": "VariableDeclaration",
+            "scope": 1727,
+            "src": "215:28:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1677,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "215:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1680,
+            "name": "getLiquidateBps",
+            "nodeType": "VariableDeclaration",
+            "scope": 1727,
+            "src": "249:30:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1679,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "249:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1682,
+            "name": "interestModel",
+            "nodeType": "VariableDeclaration",
+            "scope": 1727,
+            "src": "285:34:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_InterestModel_$4775",
+              "typeString": "contract InterestModel"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1681,
+              "name": "InterestModel",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4775,
+              "src": "285:13:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_InterestModel_$4775",
+                "typeString": "contract InterestModel"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1685,
+              "nodeType": "Block",
+              "src": "347:2:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1686,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1683,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "337:2:1"
+            },
+            "returnParameters": {
+              "id": 1684,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "347:0:1"
+            },
+            "scope": 1727,
+            "src": "326:23:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1709,
+              "nodeType": "Block",
+              "src": "471:131:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1699,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1697,
+                      "name": "getReserveBps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1678,
+                      "src": "481:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1698,
+                      "name": "_getReserveBps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1688,
+                      "src": "497:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "481:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1700,
+                  "nodeType": "ExpressionStatement",
+                  "src": "481:30:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1703,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1701,
+                      "name": "getLiquidateBps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1680,
+                      "src": "521:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1702,
+                      "name": "_getLiquidateBps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1690,
+                      "src": "539:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "521:34:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1704,
+                  "nodeType": "ExpressionStatement",
+                  "src": "521:34:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1707,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1705,
+                      "name": "interestModel",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1682,
+                      "src": "565:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_InterestModel_$4775",
+                        "typeString": "contract InterestModel"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1706,
+                      "name": "_interestModel",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1692,
+                      "src": "581:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_InterestModel_$4775",
+                        "typeString": "contract InterestModel"
+                      }
+                    },
+                    "src": "565:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_InterestModel_$4775",
+                      "typeString": "contract InterestModel"
+                    }
+                  },
+                  "id": 1708,
+                  "nodeType": "ExpressionStatement",
+                  "src": "565:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1710,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1695,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1694,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5037,
+                  "src": "461:9:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "461:9:1"
+              }
+            ],
+            "name": "setParams",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1693,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "name": "_getReserveBps",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1710,
+                  "src": "374:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1687,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "374:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1690,
+                  "name": "_getLiquidateBps",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1710,
+                  "src": "398:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1689,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "398:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1692,
+                  "name": "_interestModel",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1710,
+                  "src": "424:28:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_InterestModel_$4775",
+                    "typeString": "contract InterestModel"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1691,
+                    "name": "InterestModel",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 4775,
+                    "src": "424:13:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_InterestModel_$4775",
+                      "typeString": "contract InterestModel"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "373:80:1"
+            },
+            "returnParameters": {
+              "id": 1696,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "471:0:1"
+            },
+            "scope": 1727,
+            "src": "355:247:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1725,
+              "nodeType": "Block",
+              "src": "697:69:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1721,
+                        "name": "debt",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1712,
+                        "src": "744:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1722,
+                        "name": "floating",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1714,
+                        "src": "750:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1719,
+                        "name": "interestModel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1682,
+                        "src": "714:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_InterestModel_$4775",
+                          "typeString": "contract InterestModel"
+                        }
+                      },
+                      "id": 1720,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getInterestRate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4774,
+                      "src": "714:29:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256) view external returns (uint256)"
+                      }
+                    },
+                    "id": 1723,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "714:45:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1718,
+                  "id": 1724,
+                  "nodeType": "Return",
+                  "src": "707:52:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1726,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getInterestRate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1715,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1712,
+                  "name": "debt",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1726,
+                  "src": "633:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1711,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "633:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1714,
+                  "name": "floating",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1726,
+                  "src": "647:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1713,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "647:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "632:32:1"
+            },
+            "returnParameters": {
+              "id": 1718,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1717,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1726,
+                  "src": "688:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1716,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "688:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "687:9:1"
+            },
+            "scope": 1727,
+            "src": "608:158:1",
+            "stateMutability": "view",
+            "superFunction": 3816,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1728,
+        "src": "164:604:1"
+      }
+    ],
+    "src": "1:767:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/BankConfig.sol",
+      "exportedSymbols": {
+        "BankConfig": [
+          1727
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 1669,
+        "name": "PragmaDirective",
+        "src": "1:24:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 5105,
+          "absolutePath": "@openzeppelin/contracts/ownership/Ownable.sol",
+          "file": "@openzeppelin/contracts/ownership/Ownable.sol",
+          "scope": 1728,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1670,
+        "name": "ImportDirective",
+        "src": "27:55:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 3828,
+          "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/IBankConfig.sol",
+          "file": "./interfaces/IBankConfig.sol",
+          "scope": 1728,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1671,
+        "name": "ImportDirective",
+        "src": "83:38:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 4776,
+          "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/InterestModel.sol",
+          "file": "./interfaces/InterestModel.sol",
+          "scope": 1728,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1672,
+        "name": "ImportDirective",
+        "src": "122:40:1"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            3827,
+            5104
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1727,
+            5104,
+            3827
+          ],
+          "name": "BankConfig",
+          "scope": 1728
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IBankConfig",
+                  "referencedDeclaration": 3827,
+                  "type": "contract IBankConfig"
+                },
+                "id": 1673,
+                "name": "UserDefinedTypeName",
+                "src": "187:11:1"
+              }
+            ],
+            "id": 1674,
+            "name": "InheritanceSpecifier",
+            "src": "187:11:1"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 5104,
+                  "type": "contract Ownable"
+                },
+                "id": 1675,
+                "name": "UserDefinedTypeName",
+                "src": "200:7:1"
+              }
+            ],
+            "id": 1676,
+            "name": "InheritanceSpecifier",
+            "src": "200:7:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "getReserveBps",
+              "scope": 1727,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 1677,
+                "name": "ElementaryTypeName",
+                "src": "215:7:1"
+              }
+            ],
+            "id": 1678,
+            "name": "VariableDeclaration",
+            "src": "215:28:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "getLiquidateBps",
+              "scope": 1727,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 1679,
+                "name": "ElementaryTypeName",
+                "src": "249:7:1"
+              }
+            ],
+            "id": 1680,
+            "name": "VariableDeclaration",
+            "src": "249:30:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "interestModel",
+              "scope": 1727,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract InterestModel",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "InterestModel",
+                  "referencedDeclaration": 4775,
+                  "type": "contract InterestModel"
+                },
+                "id": 1681,
+                "name": "UserDefinedTypeName",
+                "src": "285:13:1"
+              }
+            ],
+            "id": 1682,
+            "name": "VariableDeclaration",
+            "src": "285:34:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 1727,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1683,
+                "name": "ParameterList",
+                "src": "337:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1684,
+                "name": "ParameterList",
+                "src": "347:0:1"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1685,
+                "name": "Block",
+                "src": "347:2:1"
+              }
+            ],
+            "id": 1686,
+            "name": "FunctionDefinition",
+            "src": "326:23:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "setParams",
+              "scope": 1727,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_getReserveBps",
+                      "scope": 1710,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1687,
+                        "name": "ElementaryTypeName",
+                        "src": "374:7:1"
+                      }
+                    ],
+                    "id": 1688,
+                    "name": "VariableDeclaration",
+                    "src": "374:22:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_getLiquidateBps",
+                      "scope": 1710,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1689,
+                        "name": "ElementaryTypeName",
+                        "src": "398:7:1"
+                      }
+                    ],
+                    "id": 1690,
+                    "name": "VariableDeclaration",
+                    "src": "398:24:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_interestModel",
+                      "scope": 1710,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract InterestModel",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "InterestModel",
+                          "referencedDeclaration": 4775,
+                          "type": "contract InterestModel"
+                        },
+                        "id": 1691,
+                        "name": "UserDefinedTypeName",
+                        "src": "424:13:1"
+                      }
+                    ],
+                    "id": 1692,
+                    "name": "VariableDeclaration",
+                    "src": "424:28:1"
+                  }
+                ],
+                "id": 1693,
+                "name": "ParameterList",
+                "src": "373:80:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1696,
+                "name": "ParameterList",
+                "src": "471:0:1"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 5037,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 1694,
+                    "name": "Identifier",
+                    "src": "461:9:1"
+                  }
+                ],
+                "id": 1695,
+                "name": "ModifierInvocation",
+                "src": "461:9:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1678,
+                              "type": "uint256",
+                              "value": "getReserveBps"
+                            },
+                            "id": 1697,
+                            "name": "Identifier",
+                            "src": "481:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1688,
+                              "type": "uint256",
+                              "value": "_getReserveBps"
+                            },
+                            "id": 1698,
+                            "name": "Identifier",
+                            "src": "497:14:1"
+                          }
+                        ],
+                        "id": 1699,
+                        "name": "Assignment",
+                        "src": "481:30:1"
+                      }
+                    ],
+                    "id": 1700,
+                    "name": "ExpressionStatement",
+                    "src": "481:30:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1680,
+                              "type": "uint256",
+                              "value": "getLiquidateBps"
+                            },
+                            "id": 1701,
+                            "name": "Identifier",
+                            "src": "521:15:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1690,
+                              "type": "uint256",
+                              "value": "_getLiquidateBps"
+                            },
+                            "id": 1702,
+                            "name": "Identifier",
+                            "src": "539:16:1"
+                          }
+                        ],
+                        "id": 1703,
+                        "name": "Assignment",
+                        "src": "521:34:1"
+                      }
+                    ],
+                    "id": 1704,
+                    "name": "ExpressionStatement",
+                    "src": "521:34:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract InterestModel"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1682,
+                              "type": "contract InterestModel",
+                              "value": "interestModel"
+                            },
+                            "id": 1705,
+                            "name": "Identifier",
+                            "src": "565:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1692,
+                              "type": "contract InterestModel",
+                              "value": "_interestModel"
+                            },
+                            "id": 1706,
+                            "name": "Identifier",
+                            "src": "581:14:1"
+                          }
+                        ],
+                        "id": 1707,
+                        "name": "Assignment",
+                        "src": "565:30:1"
+                      }
+                    ],
+                    "id": 1708,
+                    "name": "ExpressionStatement",
+                    "src": "565:30:1"
+                  }
+                ],
+                "id": 1709,
+                "name": "Block",
+                "src": "471:131:1"
+              }
+            ],
+            "id": 1710,
+            "name": "FunctionDefinition",
+            "src": "355:247:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getInterestRate",
+              "scope": 1727,
+              "stateMutability": "view",
+              "superFunction": 3816,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "debt",
+                      "scope": 1726,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1711,
+                        "name": "ElementaryTypeName",
+                        "src": "633:7:1"
+                      }
+                    ],
+                    "id": 1712,
+                    "name": "VariableDeclaration",
+                    "src": "633:12:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "floating",
+                      "scope": 1726,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1713,
+                        "name": "ElementaryTypeName",
+                        "src": "647:7:1"
+                      }
+                    ],
+                    "id": 1714,
+                    "name": "VariableDeclaration",
+                    "src": "647:16:1"
+                  }
+                ],
+                "id": 1715,
+                "name": "ParameterList",
+                "src": "632:32:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1726,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1716,
+                        "name": "ElementaryTypeName",
+                        "src": "688:7:1"
+                      }
+                    ],
+                    "id": 1717,
+                    "name": "VariableDeclaration",
+                    "src": "688:7:1"
+                  }
+                ],
+                "id": 1718,
+                "name": "ParameterList",
+                "src": "687:9:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1718
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "getInterestRate",
+                              "referencedDeclaration": 4774,
+                              "type": "function (uint256,uint256) view external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1682,
+                                  "type": "contract InterestModel",
+                                  "value": "interestModel"
+                                },
+                                "id": 1719,
+                                "name": "Identifier",
+                                "src": "714:13:1"
+                              }
+                            ],
+                            "id": 1720,
+                            "name": "MemberAccess",
+                            "src": "714:29:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1712,
+                              "type": "uint256",
+                              "value": "debt"
+                            },
+                            "id": 1721,
+                            "name": "Identifier",
+                            "src": "744:4:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1714,
+                              "type": "uint256",
+                              "value": "floating"
+                            },
+                            "id": 1722,
+                            "name": "Identifier",
+                            "src": "750:8:1"
+                          }
+                        ],
+                        "id": 1723,
+                        "name": "FunctionCall",
+                        "src": "714:45:1"
+                      }
+                    ],
+                    "id": 1724,
+                    "name": "Return",
+                    "src": "707:52:1"
+                  }
+                ],
+                "id": 1725,
+                "name": "Block",
+                "src": "697:69:1"
+              }
+            ],
+            "id": 1726,
+            "name": "FunctionDefinition",
+            "src": "608:158:1"
+          }
+        ],
+        "id": 1727,
+        "name": "ContractDefinition",
+        "src": "164:604:1"
+      }
+    ],
+    "id": 1728,
+    "name": "SourceUnit",
+    "src": "1:767:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-01T04:18:37.527Z",
+  "devdoc": {
+    "methods": {
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "contractName": "Strategy",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "borrowToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "borrow",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "debt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "execute",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"borrowToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"borrow\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"debt\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"execute\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"execute(address,address,uint256,uint256,bytes)\":{\"details\":\"Execute worker strategy. Take LP tokens + debt token. Return LP tokens or debt token.\",\"params\":{\"borrow\":\"The amount user borrow from bank.\",\"borrowToken\":\"The token user want borrow.\",\"data\":\"Extra calldata information passed along to this strategy.\",\"debt\":\"The user's total debt, for better decision making context.\",\"user\":\"The original user that is interacting with the operator.\"},\"return\":\"token and amount need transfer back.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Strategy.sol\":\"Strategy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Strategy.sol\":{\"keccak256\":\"0x4cdeec5141cf12a8ae649ca7c4c734a2cebff6bae63f2bf4024b9bbc90e41cb5\",\"urls\":[\"bzz-raw://50279062259da53c60429b0186a836526ab2ea4b5efcebd613a0038c573aa37b\",\"dweb:/ipfs/Qmexg4ZrbR3q6yxBooKMBpppEkXXXK7zySXTm8wEBgiFGn\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\npragma solidity ^0.5.16;\n\ninterface Strategy {\n\n    /// @dev Execute worker strategy. Take LP tokens + debt token. Return LP tokens or debt token.\n    /// @param user The original user that is interacting with the operator.\n    /// @param borrowToken The token user want borrow.\n    /// @param borrow The amount user borrow from bank.\n    /// @param debt The user's total debt, for better decision making context.\n    /// @param data Extra calldata information passed along to this strategy.\n    /// @return token and amount need transfer back.\n    function execute(address user, address borrowToken, uint256 borrow, uint256 debt, bytes calldata data) external payable;\n\n}\n",
+  "sourcePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Strategy.sol",
+  "ast": {
+    "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Strategy.sol",
+    "exportedSymbols": {
+      "Strategy": [
+        6656
+      ]
+    },
+    "id": 6657,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6642,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:24:19"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6656,
+        "linearizedBaseContracts": [
+          6656
+        ],
+        "name": "Strategy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Execute worker strategy. Take LP tokens + debt token. Return LP tokens or debt token.\n @param user The original user that is interacting with the operator.\n @param borrowToken The token user want borrow.\n @param borrow The amount user borrow from bank.\n @param debt The user's total debt, for better decision making context.\n @param data Extra calldata information passed along to this strategy.\n @return token and amount need transfer back.",
+            "id": 6655,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "execute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6653,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6644,
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6655,
+                  "src": "567:12:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6643,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "567:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6646,
+                  "name": "borrowToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6655,
+                  "src": "581:19:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6645,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "581:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6648,
+                  "name": "borrow",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6655,
+                  "src": "602:14:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6647,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "602:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6650,
+                  "name": "debt",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6655,
+                  "src": "618:12:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6649,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "618:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6652,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6655,
+                  "src": "632:19:19",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6651,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "632:5:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "566:86:19"
+            },
+            "returnParameters": {
+              "id": 6654,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "669:0:19"
+            },
+            "scope": 6656,
+            "src": "550:120:19",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6657,
+        "src": "27:646:19"
+      }
+    ],
+    "src": "1:673:19"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Strategy.sol",
+      "exportedSymbols": {
+        "Strategy": [
+          6656
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 6642,
+        "name": "PragmaDirective",
+        "src": "1:24:19"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            6656
+          ],
+          "name": "Strategy",
+          "scope": 6657
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev Execute worker strategy. Take LP tokens + debt token. Return LP tokens or debt token.\n @param user The original user that is interacting with the operator.\n @param borrowToken The token user want borrow.\n @param borrow The amount user borrow from bank.\n @param debt The user's total debt, for better decision making context.\n @param data Extra calldata information passed along to this strategy.\n @return token and amount need transfer back.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "execute",
+              "scope": 6656,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "user",
+                      "scope": 6655,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 6643,
+                        "name": "ElementaryTypeName",
+                        "src": "567:7:19"
+                      }
+                    ],
+                    "id": 6644,
+                    "name": "VariableDeclaration",
+                    "src": "567:12:19"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "borrowToken",
+                      "scope": 6655,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 6645,
+                        "name": "ElementaryTypeName",
+                        "src": "581:7:19"
+                      }
+                    ],
+                    "id": 6646,
+                    "name": "VariableDeclaration",
+                    "src": "581:19:19"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "borrow",
+                      "scope": 6655,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6647,
+                        "name": "ElementaryTypeName",
+                        "src": "602:7:19"
+                      }
+                    ],
+                    "id": 6648,
+                    "name": "VariableDeclaration",
+                    "src": "602:14:19"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "debt",
+                      "scope": 6655,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6649,
+                        "name": "ElementaryTypeName",
+                        "src": "618:7:19"
+                      }
+                    ],
+                    "id": 6650,
+                    "name": "VariableDeclaration",
+                    "src": "618:12:19"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "data",
+                      "scope": 6655,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 6651,
+                        "name": "ElementaryTypeName",
+                        "src": "632:5:19"
+                      }
+                    ],
+                    "id": 6652,
+                    "name": "VariableDeclaration",
+                    "src": "632:19:19"
+                  }
+                ],
+                "id": 6653,
+                "name": "ParameterList",
+                "src": "566:86:19"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6654,
+                "name": "ParameterList",
+                "src": "669:0:19"
+              }
+            ],
+            "id": 6655,
+            "name": "FunctionDefinition",
+            "src": "550:120:19"
+          }
+        ],
+        "id": 6656,
+        "name": "ContractDefinition",
+        "src": "27:646:19"
+      }
+    ],
+    "id": 6657,
+    "name": "SourceUnit",
+    "src": "1:673:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-03-31T08:38:07.135Z",
+  "devdoc": {
+    "methods": {
+      "execute(address,address,uint256,uint256,bytes)": {
+        "details": "Execute worker strategy. Take LP tokens + debt token. Return LP tokens or debt token.",
+        "params": {
+          "borrow": "The amount user borrow from bank.",
+          "borrowToken": "The token user want borrow.",
+          "data": "Extra calldata information passed along to this strategy.",
+          "debt": "The user's total debt, for better decision making context.",
+          "user": "The original user that is interacting with the operator."
+        },
+        "return": "token and amount need transfer back."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

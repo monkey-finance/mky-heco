@@ -1,0 +1,1053 @@
+{
+  "contractName": "Goblin",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "borrowToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "borrow",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "debt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "work",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "borrowToken",
+          "type": "address"
+        }
+      ],
+      "name": "health",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "borrowToken",
+          "type": "address"
+        }
+      ],
+      "name": "liquidate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"borrowToken\",\"type\":\"address\"}],\"name\":\"health\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"borrowToken\",\"type\":\"address\"}],\"name\":\"liquidate\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"borrowToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"borrow\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"debt\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"work\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"health(uint256,address)\":{\"details\":\"Return the amount of ETH wei to get back if we are to liquidate the position.\"},\"liquidate(uint256,address,address)\":{\"details\":\"Liquidate the given position to token need. Send all ETH back to Bank.\"},\"work(uint256,address,address,uint256,uint256,bytes)\":{\"details\":\"Work on a (potentially new) position. Optionally send surplus token back to Bank.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Goblin.sol\":\"Goblin\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Goblin.sol\":{\"keccak256\":\"0x3f1b6053464f272a02712db07b391de921d3ed0dc52c66842da54e7169fe710e\",\"urls\":[\"bzz-raw://caf54759c5b85389e4c4c70b52eb0153563316a910fddbae4f774802841445cc\",\"dweb:/ipfs/QmafWD1uW49KTUBku8X9zcPCKFZikP7ckaWhRNq3v9pcW6\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\npragma solidity ^0.5.16;\n\ninterface Goblin {\n\n    /// @dev Work on a (potentially new) position. Optionally send surplus token back to Bank.\n    function work(uint256 id, address user, address borrowToken, uint256 borrow, uint256 debt, bytes calldata data) external payable;\n\n    /// @dev Return the amount of ETH wei to get back if we are to liquidate the position.\n    function health(uint256 id, address borrowToken) external view returns (uint256);\n\n    /// @dev Liquidate the given position to token need. Send all ETH back to Bank.\n    function liquidate(uint256 id, address user, address borrowToken) external;\n}",
+  "sourcePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Goblin.sol",
+  "ast": {
+    "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Goblin.sol",
+    "exportedSymbols": {
+      "Goblin": [
+        3805
+      ]
+    },
+    "id": 3806,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3771,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:24:10"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3805,
+        "linearizedBaseContracts": [
+          3805
+        ],
+        "name": "Goblin",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Work on a (potentially new) position. Optionally send surplus token back to Bank.",
+            "id": 3786,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "work",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3784,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3773,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3786,
+                  "src": "160:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3772,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "160:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3775,
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3786,
+                  "src": "172:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3774,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "172:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3777,
+                  "name": "borrowToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3786,
+                  "src": "186:19:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3776,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "186:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3779,
+                  "name": "borrow",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3786,
+                  "src": "207:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3778,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "207:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3781,
+                  "name": "debt",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3786,
+                  "src": "223:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3780,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "223:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3783,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3786,
+                  "src": "237:19:10",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3782,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "237:5:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "159:98:10"
+            },
+            "returnParameters": {
+              "id": 3785,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "274:0:10"
+            },
+            "scope": 3805,
+            "src": "146:129:10",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Return the amount of ETH wei to get back if we are to liquidate the position.",
+            "id": 3795,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "health",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3791,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3788,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3795,
+                  "src": "388:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3787,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "388:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3790,
+                  "name": "borrowToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3795,
+                  "src": "400:19:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3789,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "400:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "387:33:10"
+            },
+            "returnParameters": {
+              "id": 3794,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3793,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3795,
+                  "src": "444:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3792,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "444:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "443:9:10"
+            },
+            "scope": 3805,
+            "src": "372:81:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Liquidate the given position to token need. Send all ETH back to Bank.",
+            "id": 3804,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "liquidate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3802,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3797,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3804,
+                  "src": "562:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3796,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "562:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3799,
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3804,
+                  "src": "574:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3798,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "574:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3801,
+                  "name": "borrowToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3804,
+                  "src": "588:19:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3800,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "588:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "561:47:10"
+            },
+            "returnParameters": {
+              "id": 3803,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "617:0:10"
+            },
+            "scope": 3805,
+            "src": "543:75:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3806,
+        "src": "27:593:10"
+      }
+    ],
+    "src": "1:619:10"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/Goblin.sol",
+      "exportedSymbols": {
+        "Goblin": [
+          3805
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 3771,
+        "name": "PragmaDirective",
+        "src": "1:24:10"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            3805
+          ],
+          "name": "Goblin",
+          "scope": 3806
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev Work on a (potentially new) position. Optionally send surplus token back to Bank.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "work",
+              "scope": 3805,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 3786,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3772,
+                        "name": "ElementaryTypeName",
+                        "src": "160:7:10"
+                      }
+                    ],
+                    "id": 3773,
+                    "name": "VariableDeclaration",
+                    "src": "160:10:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "user",
+                      "scope": 3786,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3774,
+                        "name": "ElementaryTypeName",
+                        "src": "172:7:10"
+                      }
+                    ],
+                    "id": 3775,
+                    "name": "VariableDeclaration",
+                    "src": "172:12:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "borrowToken",
+                      "scope": 3786,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3776,
+                        "name": "ElementaryTypeName",
+                        "src": "186:7:10"
+                      }
+                    ],
+                    "id": 3777,
+                    "name": "VariableDeclaration",
+                    "src": "186:19:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "borrow",
+                      "scope": 3786,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3778,
+                        "name": "ElementaryTypeName",
+                        "src": "207:7:10"
+                      }
+                    ],
+                    "id": 3779,
+                    "name": "VariableDeclaration",
+                    "src": "207:14:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "debt",
+                      "scope": 3786,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3780,
+                        "name": "ElementaryTypeName",
+                        "src": "223:7:10"
+                      }
+                    ],
+                    "id": 3781,
+                    "name": "VariableDeclaration",
+                    "src": "223:12:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "data",
+                      "scope": 3786,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 3782,
+                        "name": "ElementaryTypeName",
+                        "src": "237:5:10"
+                      }
+                    ],
+                    "id": 3783,
+                    "name": "VariableDeclaration",
+                    "src": "237:19:10"
+                  }
+                ],
+                "id": 3784,
+                "name": "ParameterList",
+                "src": "159:98:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3785,
+                "name": "ParameterList",
+                "src": "274:0:10"
+              }
+            ],
+            "id": 3786,
+            "name": "FunctionDefinition",
+            "src": "146:129:10"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev Return the amount of ETH wei to get back if we are to liquidate the position.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "health",
+              "scope": 3805,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 3795,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3787,
+                        "name": "ElementaryTypeName",
+                        "src": "388:7:10"
+                      }
+                    ],
+                    "id": 3788,
+                    "name": "VariableDeclaration",
+                    "src": "388:10:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "borrowToken",
+                      "scope": 3795,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3789,
+                        "name": "ElementaryTypeName",
+                        "src": "400:7:10"
+                      }
+                    ],
+                    "id": 3790,
+                    "name": "VariableDeclaration",
+                    "src": "400:19:10"
+                  }
+                ],
+                "id": 3791,
+                "name": "ParameterList",
+                "src": "387:33:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3795,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3792,
+                        "name": "ElementaryTypeName",
+                        "src": "444:7:10"
+                      }
+                    ],
+                    "id": 3793,
+                    "name": "VariableDeclaration",
+                    "src": "444:7:10"
+                  }
+                ],
+                "id": 3794,
+                "name": "ParameterList",
+                "src": "443:9:10"
+              }
+            ],
+            "id": 3795,
+            "name": "FunctionDefinition",
+            "src": "372:81:10"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev Liquidate the given position to token need. Send all ETH back to Bank.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "liquidate",
+              "scope": 3805,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 3804,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3796,
+                        "name": "ElementaryTypeName",
+                        "src": "562:7:10"
+                      }
+                    ],
+                    "id": 3797,
+                    "name": "VariableDeclaration",
+                    "src": "562:10:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "user",
+                      "scope": 3804,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3798,
+                        "name": "ElementaryTypeName",
+                        "src": "574:7:10"
+                      }
+                    ],
+                    "id": 3799,
+                    "name": "VariableDeclaration",
+                    "src": "574:12:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "borrowToken",
+                      "scope": 3804,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3800,
+                        "name": "ElementaryTypeName",
+                        "src": "588:7:10"
+                      }
+                    ],
+                    "id": 3801,
+                    "name": "VariableDeclaration",
+                    "src": "588:19:10"
+                  }
+                ],
+                "id": 3802,
+                "name": "ParameterList",
+                "src": "561:47:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3803,
+                "name": "ParameterList",
+                "src": "617:0:10"
+              }
+            ],
+            "id": 3804,
+            "name": "FunctionDefinition",
+            "src": "543:75:10"
+          }
+        ],
+        "id": 3805,
+        "name": "ContractDefinition",
+        "src": "27:593:10"
+      }
+    ],
+    "id": 3806,
+    "name": "SourceUnit",
+    "src": "1:619:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-01T04:18:37.554Z",
+  "devdoc": {
+    "methods": {
+      "health(uint256,address)": {
+        "details": "Return the amount of ETH wei to get back if we are to liquidate the position."
+      },
+      "liquidate(uint256,address,address)": {
+        "details": "Liquidate the given position to token need. Send all ETH back to Bank."
+      },
+      "work(uint256,address,address,uint256,uint256,bytes)": {
+        "details": "Work on a (potentially new) position. Optionally send surplus token back to Bank."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "contractName": "ISwapMining",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "takerWithdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "pid",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUserReward",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"pid\",\"type\":\"uint256\"}],\"name\":\"getUserReward\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"takerWithdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getUserReward(uint256)\":{\"params\":{\"pid\":\"pid of pair.\"}}}},\"userdoc\":{\"methods\":{\"getUserReward(uint256)\":{\"notice\":\"Get rewards from users in the current pool\"},\"takerWithdraw()\":{\"notice\":\"The user withdraws all the transaction rewards of the pool\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ISwapMining.sol\":\"ISwapMining\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ISwapMining.sol\":{\"keccak256\":\"0x2c5de3943a1ddb391240e165ab4d027998206a6349b8328cac137d03fe25d72d\",\"urls\":[\"bzz-raw://c5ad3e86eb1b6e2efcd6a38c7036ca54bab63fd02f712d03ab85baa277ed14fe\",\"dweb:/ipfs/QmNwkFHRujaZewEBejLa7Rv2GKxh1yNJGeYPxrZeNCL9pt\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/**\n * Interface of SwapMining contract.\n */\npragma solidity ^0.5.16;\n\ninterface ISwapMining {\n\n    /// The user withdraws all the transaction rewards of the pool\n    function takerWithdraw() external;\n\n    /// Get rewards from users in the current pool\n    /// @param pid pid of pair.\n    function getUserReward(uint256 pid) external view returns (uint256, uint256);\n\n}",
+  "sourcePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ISwapMining.sol",
+  "ast": {
+    "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ISwapMining.sol",
+    "exportedSymbols": {
+      "ISwapMining": [
+        5032
+      ]
+    },
+    "id": 5033,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5019,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "45:24:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 5032,
+        "linearizedBaseContracts": [
+          5032
+        ],
+        "name": "ISwapMining",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "The user withdraws all the transaction rewards of the pool",
+            "id": 5022,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "takerWithdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5020,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:2:16"
+            },
+            "returnParameters": {
+              "id": 5021,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "200:0:16"
+            },
+            "scope": 5032,
+            "src": "167:34:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "Get rewards from users in the current pool\n @param pid pid of pair.",
+            "id": 5031,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUserReward",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5025,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5024,
+                  "name": "pid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5031,
+                  "src": "313:11:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5023,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "313:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "312:13:16"
+            },
+            "returnParameters": {
+              "id": 5030,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5027,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5031,
+                  "src": "349:7:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5026,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5029,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5031,
+                  "src": "358:7:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5028,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "348:18:16"
+            },
+            "scope": 5032,
+            "src": "290:77:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5033,
+        "src": "71:299:16"
+      }
+    ],
+    "src": "45:325:16"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/yin/projects/homora/pilot/pilot-test/contracts/interfaces/ISwapMining.sol",
+      "exportedSymbols": {
+        "ISwapMining": [
+          5032
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 5019,
+        "name": "PragmaDirective",
+        "src": "45:24:16"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            5032
+          ],
+          "name": "ISwapMining",
+          "scope": 5033
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "The user withdraws all the transaction rewards of the pool",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "takerWithdraw",
+              "scope": 5032,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5020,
+                "name": "ParameterList",
+                "src": "189:2:16"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5021,
+                "name": "ParameterList",
+                "src": "200:0:16"
+              }
+            ],
+            "id": 5022,
+            "name": "FunctionDefinition",
+            "src": "167:34:16"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "Get rewards from users in the current pool\n @param pid pid of pair.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getUserReward",
+              "scope": 5032,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "pid",
+                      "scope": 5031,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5023,
+                        "name": "ElementaryTypeName",
+                        "src": "313:7:16"
+                      }
+                    ],
+                    "id": 5024,
+                    "name": "VariableDeclaration",
+                    "src": "313:11:16"
+                  }
+                ],
+                "id": 5025,
+                "name": "ParameterList",
+                "src": "312:13:16"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 5031,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5026,
+                        "name": "ElementaryTypeName",
+                        "src": "349:7:16"
+                      }
+                    ],
+                    "id": 5027,
+                    "name": "VariableDeclaration",
+                    "src": "349:7:16"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 5031,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 5028,
+                        "name": "ElementaryTypeName",
+                        "src": "358:7:16"
+                      }
+                    ],
+                    "id": 5029,
+                    "name": "VariableDeclaration",
+                    "src": "358:7:16"
+                  }
+                ],
+                "id": 5030,
+                "name": "ParameterList",
+                "src": "348:18:16"
+              }
+            ],
+            "id": 5031,
+            "name": "FunctionDefinition",
+            "src": "290:77:16"
+          }
+        ],
+        "id": 5032,
+        "name": "ContractDefinition",
+        "src": "71:299:16"
+      }
+    ],
+    "id": 5033,
+    "name": "SourceUnit",
+    "src": "45:325:16"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-01T03:22:56.610Z",
+  "devdoc": {
+    "methods": {
+      "getUserReward(uint256)": {
+        "params": {
+          "pid": "pid of pair."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "getUserReward(uint256)": {
+        "notice": "Get rewards from users in the current pool"
+      },
+      "takerWithdraw()": {
+        "notice": "The user withdraws all the transaction rewards of the pool"
+      }
+    }
+  }
+}
